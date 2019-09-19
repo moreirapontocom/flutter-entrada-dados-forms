@@ -7,6 +7,7 @@ class MyCheckbox extends StatefulWidget {
 
 class _MyCheckboxState extends State<MyCheckbox> {
 
+  bool _selectAll = false;
   bool _checkbox = true;
   bool _checkbox2 = false;
 
@@ -25,6 +26,36 @@ class _MyCheckboxState extends State<MyCheckbox> {
               padding: EdgeInsets.only(top: 20, bottom: 10),
               child: Column(
                 children: <Widget>[
+
+                  Padding(
+                    padding: EdgeInsets.only(bottom: 10),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      children: <Widget>[
+
+                        Checkbox(
+                          value: _selectAll,
+                          activeColor: Colors.green,
+                          onChanged: (bool valor) {
+                            if (valor==true) {
+                              setState(() {
+                                _selectAll = true;
+                                _checkbox = true;
+                                _checkbox2 = true;
+                              });
+                            } else {
+                              setState(() {
+                                _selectAll = false;
+                                _checkbox = false;
+                                _checkbox2 = false;
+                              });
+                            }
+                          },
+                        )
+
+                      ],
+                    ),
+                  ),
 
                   CheckboxListTile( // Ou apenas o Checkbox (sem o title) para ter apenas o quadradinho
                     title: Text("Teste de checkbox"),
