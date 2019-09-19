@@ -66,6 +66,9 @@ class _CampoTextoState extends State<CampoTexto> {
                 padding: EdgeInsets.only(top: 20, bottom: 10),
                 child: CheckboxListTile( // Ou apenas o Checkbox (sem o title) para ter apenas o quadradinho
                   title: Text("Teste de checkbox"),
+                  subtitle: Text("Teste de subtítulo"),
+                  secondary: Icon(Icons.account_circle),
+                  activeColor: Colors.blue,
                   value: _checkbox,
                   onChanged: (bool valor) {
                     setState(() {
