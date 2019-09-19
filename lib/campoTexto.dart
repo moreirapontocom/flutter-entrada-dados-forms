@@ -64,20 +64,14 @@ class _CampoTextoState extends State<CampoTexto> {
               ),
               Padding(
                 padding: EdgeInsets.only(top: 20, bottom: 10),
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: <Widget>[
-                    Text("Teste de Checkbox"),
-                    Checkbox(
-                      value: _checkbox,
-                      onChanged: (bool valor) {
-                        print("O valor do checkbox é: " + valor.toString());
-                        setState(() {
-                          _checkbox = valor;
-                        });
-                      },
-                    )
-                  ],
+                child: CheckboxListTile( // Ou apenas o Checkbox (sem o title) para ter apenas o quadradinho
+                  title: Text("Teste de checkbox"),
+                  value: _checkbox,
+                  onChanged: (bool valor) {
+                    setState(() {
+                      _checkbox = valor;
+                    });
+                  },
                 ),
               ),
               RaisedButton(
