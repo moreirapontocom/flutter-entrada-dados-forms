@@ -63,7 +63,7 @@ class _CampoTextoState extends State<CampoTexto> {
                 ),
               ),
               Padding(
-                padding: EdgeInsets.only(top: 20),
+                padding: EdgeInsets.only(top: 20, bottom: 10),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
@@ -79,6 +79,15 @@ class _CampoTextoState extends State<CampoTexto> {
                     )
                   ],
                 ),
+              ),
+              RaisedButton(
+                color: Colors.blueAccent,
+                onPressed: () {
+                  setState(() {
+                    _checkbox = !_checkbox;
+                  });
+                },
+                child: Text("Toggle checkbox", style: TextStyle(color: Colors.white),),
               )
             ],
           ),
