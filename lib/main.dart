@@ -1,5 +1,6 @@
 // import 'package:entradadados/campoTexto.dart';
-import 'package:entradadados/mycheckbox.dart';
+// import 'package:entradadados/mycheckbox.dart';
+import 'package:entradadados/myRadios.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -7,6 +8,7 @@ void main() {
     debugShowCheckedModeBanner: false,
     title: "Entrada de dados",
     // home: CampoTexto()
-    home: MyCheckbox()
+    // home: MyCheckbox()
+    home: MyRadios()
   ));
 }
