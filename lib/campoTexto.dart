@@ -1,6 +1,12 @@
 import 'package:flutter/material.dart';
 
 class CampoTexto extends StatefulWidget {
+
+  String nome;
+
+  // Construtor
+  CampoTexto(this.nome);
+
   @override
   _CampoTextoState createState() => _CampoTextoState();
 }
@@ -23,7 +29,7 @@ class _CampoTextoState extends State<CampoTexto> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Entrada de dados"),
+        title: Text("Entrada de dados, ${widget.nome}"),
         backgroundColor: Colors.blue,
       ),
       body: SingleChildScrollView(

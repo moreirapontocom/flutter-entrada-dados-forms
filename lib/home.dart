@@ -32,7 +32,7 @@ class _HomePageState extends State<HomePage> {
                 Navigator.push(
                   context,
                   MaterialPageRoute(
-                    builder: (context) => CampoTexto()
+                    builder: (context) => CampoTexto("Lucas Moreira")
                   )
                 );
               },
